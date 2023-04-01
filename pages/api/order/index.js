@@ -11,7 +11,7 @@ const handler = async (req, res) => {
   const db = client.db();
 
   if (method === "GET") {
-    try {
+    try { 
       const orders = await db.collection("orders").find().toArray();
       res.status(200).json(orders,);
     } catch (err) {
